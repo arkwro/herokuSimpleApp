@@ -105,10 +105,10 @@
 			</div>		
 		
 			<!-- Articles -->
-			<c:forEach var="article" items="${articles}">
+			<c:forEach var="article" items="${articles}" varStatus="status">
 			<div class="row">
 				<article class="col-xs-12">
-					<h2>${article.title }</h2>
+					<h2>${status.index+1}). ${article.title}</h2>
 					<p>${article.body }</p>
 					<p><button class="btn btn-default">Read More</button></p>
 				</article>
